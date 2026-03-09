@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hospital Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<aside class="sidebar">
+<div class="img">
+<h2>HMS</h2>
+<img src="ihsan.jpeg" alt=""width="80px" height="80px" style="border-radius: 50%;">
+</div>
+<ul>
+<li onclick="showSection('dashboard')">Dashboard</li>
+<li onclick="showSection('patients')">Patients</li>
+<li onclick="showSection('doctors')">Doctors</li>
+<li onclick="showSection('appointments')">Appointments</li>
+<li onclick="showSection('billing')">Billing</li>
+</ul>
+
+</aside>
+
+<main class="main">
+
+<!-- Dashboard -->
+
+<section id="dashboard" class="section active">
+
+<h2>Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+Patients
+<span id="pCount">0</span>
+</div>
+
+<div class="card">
+Doctors
+<span id="dCount">0</span>
+</div>
+
+<div class="card">
+Appointments
+<span id="aCount">0</span>
+</div>
+
+<div class="card">
+Revenue
+<span id="rTotal">0</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- Patients -->
+
+<section id="patients" class="section">
+
+<h2>Add Patient</h2>
+
+<input id="pName" placeholder="Name">
+<input id="pAge" placeholder="Age">
+<input id="pDisease" placeholder="Disease">
+
+<button onclick="addPatient()">Add</button>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Disease</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="patientTable"></tbody>
+</table>
+
+</section>
+
+<!-- Doctors -->
+
+<section id="doctors" class="section">
+
+<h2>Add Doctor</h2>
+
+<input id="dName" placeholder="Name">
+<input id="dPosition" placeholder="Position">
+
+<button onclick="addDoctor()">Add</button>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Position</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="doctorTable"></tbody>
+</table>
+
+</section>
+
+<!-- Appointments -->
+
+<section id="appointments" class="section">
+
+<h2>Appointment</h2>
+
+<input id="aPatient" placeholder="Patient Name">
+<input id="aDoctor" placeholder="Doctor Name">
+<input type="date" id="aDate">
+
+<button onclick="addAppointment()">Add</button>
+
+<ul id="appointmentList"></ul>
+
+</section>
+
+<!-- Billing -->
+
+<section id="billing" class="section">
+
+<h2>Billing</h2>
+
+<input id="bPatient" placeholder="Patient">
+<input id="bAmount" placeholder="Amount">
+
+<button onclick="addBill()">Add</button>
+
+<ul id="billList"></ul>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
